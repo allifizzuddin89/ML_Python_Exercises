@@ -73,5 +73,8 @@ print(df)
 
 #WRITE TO EXCEL
 
-df.to_excel("new.xlsx", sheet_name="stock", startrow=6, startcol=2) #start writing
+df.to_excel("new.xlsx", sheet_name="stock", startrow=6, startcol=2) #start writing at certain position in excel cell
+
+#WRITE 2 DATAFRAME INTO ONE SAME EXCEL FILE
+
 
