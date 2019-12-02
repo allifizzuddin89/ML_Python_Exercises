@@ -25,3 +25,53 @@ print(df,'\n')
 #WRITING BACK TO CSV
 
 df.to_csv("new.csv", index=False) #with remove index column
+
+#only write few columns, let say 2
+
+print(df.columns)
+
+df.to_csv("new.csv", columns=["tickers", "eps"])
+
+#remove header
+df.to_csv("new.csv", header=False)
+
+
+#EXCEL
+
+df = pd.read_excel("stock_data.xlsx", "Sheet1")
+print(df)
+
+#make converter to convert messy data
+
+def converter_eps(cell):
+    if cell=="n.a":
+        return None
+    if cell=="not available":
+        return None
+    return cell
+
+def converter_price(cell):
+    if cell=="n.a.":
+        return None
+    if cell=="not available":
+        return None
+    return cell
+
+def converter_people(cell):
+    if cell=="n.a.":
+        return "Allif"
+    if cell=="not available":
+        return "Allif"
+    return cell
+
+df = pd.read_excel("stock_data.xlsx", "Sheet1", converters = {
+    'people' : converter_people,
+    'eps' : converter_eps,
+    'price' : converter_price
+})
+print(df)
+
+#WRITE TO EXCEL
+
+df.to_excel("new.xlsx", sheet_name="stock", startrow=6, startcol=2) #start writing
+
