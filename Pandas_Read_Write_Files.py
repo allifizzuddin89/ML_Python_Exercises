@@ -94,5 +94,4 @@ df_weather =  pd.DataFrame({
 with pd.ExcelWriter('stock_weather.xlsx') as writer:
     df_stocks.to_excel(writer, sheet_name="stocks")
     df_weather.to_excel(writer, sheet_name="weather")
-    
 

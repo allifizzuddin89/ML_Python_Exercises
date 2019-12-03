@@ -7,7 +7,7 @@ import pandas as pd
 df = pd.read_csv("nyc_weather.csv")
 print(df)
 
-#also can use data from dict/tuple/excel
+#also can use data from dict
 weather_data = {
     'day':['1/1/2017','1/2/2017','1/3/2017','1/4/2017','1/5/2017', '1/6/2017'],
     'temperature' : [32, 35, 28, 24, 32, 31],
@@ -20,10 +20,10 @@ print(df.shape) #print rows, column
 rows, column = df.shape
 print(rows)
 print(column)
-
+print('#'*100)
 
 #indexing and slicing
-
+print('\n','INDEXING AND SLICING','\n')
 print(df.head(2)) #print only few initial rows
 print(df.tail(1)) #print last rows
 
@@ -47,9 +47,12 @@ print(df[df.temperature == df['temperature'].max()]) #if string data type has sp
 
 print(df['day'][df.temperature == df.temperature.max()]) #print the day with max temperature
 print(df[['day','temperature']][df.temperature == df.temperature.max()]) #print the day with max temperature
+print('#'*100)
+
 
 #INDEX
 
+print('\n','INDEX','\n')
 print(df.set_index('day')) #does not modify the original data
 print(df.set_index('day', inplace = True)) #modify the original data
 print(df)
