@@ -36,5 +36,42 @@ print(new_df)
 new_df = df.fillna(method="ffill") #forward fill method, copy prev value
 print(new_df)
 
-new_df = df.fillna(method="bfill")
+new_df = df.fillna(method="bfill") #backward fill method, copy next value
+print(new_df)
 
+new_df = df.fillna(method="bfill", axis="columns") #use axis to copy data horizontally
+print(new_df)
+
+new_df = df.fillna(method="ffill", limit=2) #add limit, copy prev value only as per set limit
+print(new_df)
+
+#Interpolate using interpolate()
+#linear interpolate
+#refer pandas doc for more interpolate method
+
+new_df = df.interpolate() #linear interpolate
+print(new_df)
+
+new_df = df.interpolate(method="time") #time method, estimate missing values
+print(new_df)
+
+#Drop rows which has incomplete data
+
+new_df = df.dropna() #drop all row which has incomplete data
+print(new_df)
+
+new_df = df.dropna(how="all") #drop row which has all NaN
+print(new_df)
+
+new_df = df.dropna(thresh=1) #keep the row which as 1 non NaN
+print(new_df)
+
+#How to insert missing date
+#using date_range
+#DatetimeIndex
+#reindex
+
+dt = pd.date_range('01-01-2017','01-11-2017')
+idx = pd.DatetimeIndex(dt)
+df = df.reindex(idx)
+print(df)
