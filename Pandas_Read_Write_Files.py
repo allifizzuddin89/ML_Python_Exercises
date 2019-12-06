@@ -42,7 +42,7 @@ df = pd.read_excel("stock_data.xlsx", "Sheet1")
 print(df)
 
 #make converter to convert messy data
-
+print('\n','CONVERTER','\n')
 def converter_eps(cell):
     if cell=="n.a":
         return None
@@ -94,4 +94,6 @@ df_weather =  pd.DataFrame({
 with pd.ExcelWriter('stock_weather.xlsx') as writer:
     df_stocks.to_excel(writer, sheet_name="stocks")
     df_weather.to_excel(writer, sheet_name="weather")
+    print('\n','stocks + weather')
+    print("Done merge those dataframe to a single excel")
 
