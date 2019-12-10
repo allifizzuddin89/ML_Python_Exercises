@@ -6,6 +6,7 @@
 
 import pandas as pd 
 import numpy as np 
+import matplotlib.pyplot as plt
 
 df = pd.read_csv('weather_by_cities.csv')
 print(df)
@@ -37,5 +38,6 @@ print(g.mean())
 print(g.describe())
 
 #plotting
-#%matplotlib inline
+#%matplotlib inline #please find equivalent in python, this magic line only valid in jupyter
+#exec(%matplotlib inline)
 g.plot()
