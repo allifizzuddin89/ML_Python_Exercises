@@ -32,4 +32,37 @@ new_df1 = df.replace({
     -88888:np.NaN,
     'no event':'Sunny'
 })
+print('\n','USING MAPPING','\n')
 print(new_df1)
+
+#REGEX
+#replace pattern
+#if there is unknown unit or wordings in dataframe
+
+print('\n','REGEX','\n')
+df1 = pd.read_csv("weather_data3.csv")
+print('BEFORE REGEX','\n')
+print(df1)
+new_df = df1.replace('[A-Za-z]','',regex=True) #replace kph,mph to ''
+print(new_df) #but it erased event column
+
+#so...
+#use dict
+new_df = df1.replace({
+    'temperature':'[A-Za-z]',
+    'windspeed':'[A-Za-z]',
+},'',regex=True) #replace kph,mph to ''
+print(new_df)
+
+
+#Replacing list with another list
+df = pd.DataFrame({
+    'score': ['exceptional','average', 'good', 'poor', 'average', 'exceptional'],
+    'student': ['rob', 'maya', 'parthiv', 'tom', 'julian', 'erica']
+})
+print(df)
+
+#lets replace the grade type to score
+#map
+new_df = df.replace(['poor','average','good','exceptional'],[1,2,3,4])
+print(new_df)

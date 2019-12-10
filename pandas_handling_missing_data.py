@@ -27,6 +27,7 @@ new_df = df.fillna({
     'windspeed' : 0,
     'event' : 'no event'
 })
+print('\n','fillna replace NaN to 0','\n')
 print(new_df)
 
 #look at temperature column, some 0 data is not appealing
@@ -40,6 +41,7 @@ new_df = df.fillna(method="bfill") #backward fill method, copy next value
 print(new_df)
 
 new_df = df.fillna(method="bfill", axis="columns") #use axis to copy data horizontally
+print('\n','use axis','\n')
 print(new_df)
 
 new_df = df.fillna(method="ffill", limit=2) #add limit, copy prev value only as per set limit
@@ -49,6 +51,7 @@ print(new_df)
 #linear interpolate
 #refer pandas doc for more interpolate method
 
+print('\n','INTERPOLATE','\n')
 new_df = df.interpolate() #linear interpolate
 print(new_df)
 
