@@ -16,6 +16,7 @@ us_weather = pd.DataFrame({
 })
 print(us_weather)
 
+
 #CONCAT OR JOIN MULTIPLE DATAFRAME INTO ONE
 
 df = pd.concat([india_weather, us_weather])
