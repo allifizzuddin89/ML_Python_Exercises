@@ -18,6 +18,8 @@ print(df)
 #datetimeIndex
 #Resampling
 
+#DATE TIME INDEX
+
 #check the date data type
 print('\n',type(df.Date[0])) #str type
 
