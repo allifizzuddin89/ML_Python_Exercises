@@ -12,7 +12,7 @@ import sqlalchemy
 
 #create SQL alchemy engine
 #refer pandas doc for other sql connection
-engine = sqlalchemy.create_engine('mysql+pymysql://root:allifpro123@localhost:3306/new_schema1')
+engine = sqlalchemy.create_engine('mysql+pymysql://root:password@localhost:3306/new_schema1')
 
 df = pd.read_sql_table("Customers", engine) #pass the engine
 print('\n',df)
