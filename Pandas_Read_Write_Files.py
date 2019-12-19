@@ -1,3 +1,6 @@
+#Written by Allif Izzuddin bin Abdullah
+#github : allifizzuddin89
+
 import pandas as pd 
 df = pd.read_csv("stock_data.csv", skiprows=1) #skip row 1 from top, also similar to header=1
 print(df,'\n')

@@ -1,3 +1,5 @@
+#Written by Allif Izzuddin bin Abdullah
+#github : allifizzuddin89
 #test .py for score, error
 #use in terminal, pylint file.py
 '''

@@ -1,3 +1,6 @@
+#Written by Allif Izzuddin bin Abdullah
+#github : allifizzuddin89
+
 import pandas as pd 
 
 #USE CSV AS DATAFRAME

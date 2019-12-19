@@ -1,3 +1,5 @@
+#Written by Allif Izzuddin bin Abdullah
+#github : allifizzuddin89
 # import urllib.request
 # url = "https://github.com/allifizzuddin89/py/blob/master/pandas/1_intro/nyc_weather.csv"
 # filename, headers = urllib.request.urlretrieve(url,filename= "/home/allif_izzuddin/Documents/test/nyc_weather.csv")
