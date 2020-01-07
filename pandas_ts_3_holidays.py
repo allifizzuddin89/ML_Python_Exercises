@@ -66,5 +66,9 @@ print('\n',df)
 #lets change the calendar on the working day
 
 fri = CustomBusinessDay(weekmask='Sun Mon Tue Wed Thu')
-rng1 = pd.date_range(start='2019-05-15',end=2019-12-08,freq=fri)
+rng1 = pd.date_range(start='2019-05-15',end='2019-12-08',freq=fri)
+print('\n',rng1)
 
+fri = CustomBusinessDay(weekmask='Sun Mon Tue Wed Thu',holidays=["2019-05-19"])
+rng1 = pd.date_range(start='2019-05-15',end='2019-12-08',freq=fri)
+print('\n',rng1)
