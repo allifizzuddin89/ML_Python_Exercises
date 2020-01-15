@@ -94,4 +94,74 @@ c = np.full((2,2),78, dtype='float32')  #np.full((dimension),element)
 print('\n',c)
 print(c.dtype)
 
-#25:29
+# copy shape/dimension from other array
+#full
+#full_like
+a1 = np.full_like(a,4)
+print('\n',a1)
+print('\n',a)
+
+#similar with
+a1 = np.full(a.shape,5)
+print('\n',a1)
+
+#generate random decimal number, 4 by 2 array
+r1 = np.random.rand(4,2) #instead of giving input in tuples,"np.random.rand((4,2))", put directly
+print('\n',r1)
+
+#similar if use a.shape (ndarray.shape)
+r2 = np.random.random_sample(a.shape)
+print('\n',r2)
+
+#random integer value
+r3 = np.random.randint(22,size=(4,2)) #22 is limit value for random algo
+print('\n',r3)
+
+r3 = np.random.randint(-2,10, size=(3,5)) #10 is end value, start with 2
+print('\n',r3)
+
+#identity matrix
+idmatrix = np.identity(3) # 3 by 3 identity matrix
+print('\n',idmatrix)
+
+#repeat an array
+#axis is direction on numpy array, 0 right, 1 down
+a2 = np.array([[1,2,3]]) # 2 dim array
+r4 = np.repeat(a2,3, axis=0) #repeat 3 times
+print('\n',r4)
+
+#exrcise
+ex = np.array([[1,1,1,1,1],[1,0,0,0,1],[1,0,9,0,1],[1,0,0,0,1],[1,1,1,1,1]])
+print('\n',ex)
+
+#similar
+sol = np.full((5,5),1,dtype='int16')
+print('\n',sol)
+
+zer = np.zeros((3,3))
+print('\n',zer)
+zer[1,1] = 9
+print('\n',zer)
+sol[1:4,1:4] = zer
+print('\n',sol)
+
+#COPY issue!!!
+#see below
+
+a = np.array([1,2,3])
+print('\n',a)
+b = a
+print('\n',b)
+#lets change b
+b[1] = 22
+print('\n',b)
+#lets print a
+print('\n',a)
+
+#we can see a also change
+#we did not want this happens
+#so, ndarray.copy()
+a = np.array([1,2,3])
+b = a.copy()
+print('\n',a)
+
