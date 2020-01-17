@@ -1,4 +1,2 @@
-#Written by Allif Izzuddin bin Abdullah
-#github : allifizzuddin89
-#TIME SERIES ANALYSIS 6
-#Study case : KLSE:IHH
+c.dtype = 'int16'
+print('\n',c.dtype)
