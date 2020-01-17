@@ -17,4 +17,3 @@ min_stats = np.min(stats, axis=0) #0 to the right, 1 to downward
 print('\n',min_stats)
 stats_sum = np.sum(stats)
 print('\n',stats_sum) #sum all element
-
