@@ -16,3 +16,4 @@ plt.ylabel('Important var')
 plt.title('Growth Graph\nSubtitle of Graph')
 plt.legend()
 plt.show()
+ 
