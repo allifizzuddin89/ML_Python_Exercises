@@ -12,7 +12,7 @@ print('\n',list1)
 
 #creating 6 by 5 matrix using list1
 array2 = np.array(list1).reshape(6,5)
-print('\n',array2)
+print('\nArray 2\n',array2)
 print('\n',type(array2))
 
 matrix = [[1, 2, 3, 4], [4, 5, 6, 8]]
