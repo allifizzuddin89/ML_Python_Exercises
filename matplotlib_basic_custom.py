@@ -1,5 +1,6 @@
 #Written by Allif Izzuddin bin Abdullah
 #github : allifizzuddin89
+#basic customization matplotlib
 
 import numpy as np
 import pandas as pd
