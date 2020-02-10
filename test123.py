@@ -12,8 +12,7 @@ def bytespdate2num(fmt, encoding='utf-8'):
     
 
 def graph_data(stock):
-    # Unfortunately, Yahoo's API is no longer available
-    # feel free to adapt the code to another source, or use this drop-in replacement.
+
     stock_price_url = 'https://pythonprogramming.net/yahoo_finance_replacement'
     source_code = urllib.request.urlopen(stock_price_url).read().decode()
     stock_data = []
