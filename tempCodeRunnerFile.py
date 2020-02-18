@@ -1,8 +1,3 @@
-def bytespdate2num(fmt, encoding='utf-8'): #FMT IS FORMAT OF DATE STAMP
-#     strconverter = mdates.strpdate2num(fmt)
-#     print('\nstrconverter is {}'.format(strconverter))
-#     def bytesconverter(b):
-#         s = b.decode(encoding)
-#         return strconverter(s)
-#     print('\nBytes Converter is {}'.format(bytesconverter))
-#     return bytesconverter
+PAMylat, PAMyLon = 3.23648,101.425
+xpt, ypt = m(PAMyLon,PAMylat)
+m.plot(xpt,ypt,'c*',markersize=15) #m.plot(lon,lat,color and marker(cyan circle),markersize)
